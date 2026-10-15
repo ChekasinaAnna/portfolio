@@ -17,3 +17,10 @@
 }
 @media(max-width:1100px){.case-content-nav .case-live-link.primary{min-height:55px;padding:18px 24px}}
 @media(max-width:700px){.case-content-nav .case-live-link.primary{padding:18px 20px;font-size:12px}}
+/* На мобильных переход на сайт/приложение виден без наведения. */
+@media(max-width:900px){
+ .case-content-nav .case-live-link.primary,.case-content-nav .case-live-link.primary:is(:hover,:focus-visible){background:#254bff;color:#fff;min-height:56px;box-shadow:none}
+ .case-content-nav .case-live-link.primary::before{display:none}
+ .case-content-nav .case-live-link.primary .button-label{transform:none}
+ .case-content-nav .case-live-link.primary .button-arrow{opacity:1;transform:none;font-size:22px;line-height:19px}
+}

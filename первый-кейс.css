@@ -64,7 +64,40 @@
  .feature-about{font-size:22px;margin-bottom:12px}
  .feature-role{font-size:13px}
 }
+/* Мобильные кнопки: постоянная заливка и читаемая иерархия без наведения. */
+@media(max-width:900px){
+ .hero-3d .actions>.primary,.hero-3d .actions>.secondary{display:inline-flex;align-items:center;justify-content:center;height:56px;padding:0 24px;border-radius:40px;font-size:12px;line-height:19px}
+ .hero-3d .actions>.secondary{border:1px solid #fff;background:transparent;color:#fff;gap:14px}
+ .hero-3d .actions>.secondary>span{margin-left:0;font-size:22px;line-height:19px}
+ .hero-3d .actions>.primary,.contact-section .contact-telegram{background:#fff;color:#16171a}
+ .hero-3d .actions>.primary::before,.contact-section .contact-telegram::before{display:none}
+ .hero-3d .actions>.primary .button-label,.contact-section .contact-telegram .button-label{transform:none}
+ .hero-3d .actions>.primary .button-arrow,.contact-section .contact-telegram .button-arrow{display:none}
+ .featured-project .featured-card .feature-open{background:var(--case-button,#064f40);color:#fff}
+ .featured-project .featured-card .feature-open::before{display:none}
+ .contact-section .contact-telegram,.contact-section .contact-content>.about-link{display:flex;align-items:center;justify-content:center;width:100%;height:56px;padding:0 24px;border-radius:40px;font-size:12px;line-height:19px;gap:14px}
+ .contact-section .contact-content>.about-link{margin-top:12px;border:1px solid currentColor;color:var(--scroll-ink,#16171a);background:transparent;text-decoration:none}
+ .contact-section .contact-content>.about-link>span{font-size:22px;line-height:19px}
+ .contact-section .contact-email{display:none}
+}
+/* Точечная правка кнопок первого экрана, только в десктопной раскладке. */
+@media(min-width:901px){
+ .hero-3d .actions>.primary,.hero-3d .actions>.secondary{height:64px;display:inline-flex;align-items:center;border-radius:40px}
+ .hero-3d .actions>.secondary{padding:0 27px;border:1px solid #fff;background:transparent;color:#fff;font-size:13px;line-height:19px;gap:14px}
+ .hero-3d .actions>.secondary>span{margin-left:0}
+ .hero-3d .actions>.secondary:focus-visible{background:#fff;color:#16171a}
+ .hero-3d .replay{position:relative;border-radius:0}
+ .hero-3d .replay::after{content:"";position:absolute;left:0;right:0;bottom:5px;height:1px;background:currentColor;transform:scaleX(0);transform-origin:left;transition:transform .25s ease}
+ .hero-3d .replay:focus-visible:not(:disabled){background:transparent;color:#16171a}
+ .hero-3d .replay:focus-visible:not(:disabled)::after{transform:scaleX(1)}
+}
+@media(min-width:901px) and (hover:hover) and (pointer:fine){
+ .hero-3d .actions>.secondary:hover{background:#fff;color:#16171a}
+ .hero-3d .replay:hover:not(:disabled){background:transparent;color:#16171a}
+ .hero-3d .replay:hover:not(:disabled)::after{transform:scaleX(1)}
+}
 @media(prefers-reduced-motion:reduce){
+ .hero-3d .replay::after{transition:none}
  .hero-3d .hero-stage{transform:none}
  .feature-phone{transform:rotate(var(--phone-angle,0deg))}
  .feature-open,.feature-open::before,.feature-open>span,.hero-3d .secondary,.replay,.skip-intro{transition:none}
