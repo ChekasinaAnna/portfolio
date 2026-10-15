@@ -47,6 +47,10 @@ html{scroll-behavior:smooth}
 .case-gallery>.case-overview-heading{margin-bottom:0}
 .case-content-nav{display:flex;flex-wrap:wrap;gap:16px 32px;margin:-20px 0 36px;font-size:13px}
 .case-content-nav a{padding:12px 0;border-bottom:1px solid #bfc3cc}.case-content-nav span{margin-left:18px}.case-content-nav a:hover{color:#254bff;text-decoration:none}
+.case-content-nav .case-live-link{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:12px 20px;border:1px solid #254bff;border-radius:28px;background:#254bff;color:#fff;transition:background .2s,border-color .2s}
+.case-content-nav .case-live-link:hover{background:#183bd5;border-color:#183bd5;color:#fff}
+.case-content-nav .case-live-link:focus-visible{outline:3px solid #16171a;outline-offset:4px}
+@media(prefers-reduced-motion:reduce){.case-content-nav .case-live-link{transition:none}}
 .case-group h3{font-size:clamp(22px,2.4vw,34px);font-weight:450;letter-spacing:-.025em;margin:0 0 28px}
 .case-layout-grid{display:grid;gap:48px 36px;align-items:start}
 .case-layout-responsive{grid-template-columns:minmax(0,1fr) minmax(180px,310px)}
