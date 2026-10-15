@@ -66,7 +66,8 @@
 }
 /* Мобильные кнопки: постоянная заливка и читаемая иерархия без наведения. */
 @media(max-width:900px){
- .hero-3d .actions>.primary,.hero-3d .actions>.secondary{display:inline-flex;align-items:center;justify-content:center;height:56px;padding:0 24px;border-radius:40px;font-size:12px;line-height:19px}
+ .hero-3d .actions{width:100%;flex-direction:column;gap:10px}
+ .hero-3d .actions>.primary,.hero-3d .actions>.secondary{display:inline-flex;align-items:center;justify-content:center;width:100%;height:56px;padding:0 24px;border-radius:40px;font-size:12px;line-height:19px}
  .hero-3d .actions>.secondary{border:1px solid #fff;background:transparent;color:#fff;gap:14px}
  .hero-3d .actions>.secondary>span{margin-left:0;font-size:22px;line-height:19px}
  .hero-3d .actions>.primary,.contact-section .contact-telegram{background:#fff;color:#16171a}
