@@ -1,0 +1,13 @@
+/* Подключается только на главной. Обложки и тёмная 3D-сцена сохраняют свои цвета. */
+html.scroll-palette{background:var(--scroll-bg);color:var(--scroll-ink)}
+.scroll-palette :is(.description,.status span,.work-heading p,.project-type,.work-end,.about-heading>p,.experience-place>p,.experience-details>p,.skills-grid p,.tools-list dd,.process-list p,.ai-description,footer){color:var(--scroll-muted)}
+.scroll-palette :is(.experience-details>.experience-role,.about-link){color:var(--scroll-ink)}
+.scroll-palette :is(.process-number,.about-link:hover,.about-link:focus-visible,.ai-card:hover .ai-more,.ai-card:focus-visible .ai-more){color:var(--scroll-accent)}
+.scroll-palette :is(.experience-row,.tools-block,.process-list li,footer.site-footer){border-color:var(--scroll-rule)}
+.scroll-palette :is(a,button):focus-visible{outline-color:var(--scroll-accent)}
+.scroll-palette .contact-telegram{box-shadow:0 0 0 1px #ffffff55}
+.scroll-palette .contact-telegram:focus-visible::before{background:#16171a}
+@media(hover:hover) and (pointer:fine){.scroll-palette .contact-telegram:hover::before{background:#16171a}}
+.scroll-palette .cursor.is-over-control{background:var(--scroll-ink)}
+.scroll-palette .cursor.is-interactive{background:var(--scroll-accent)}
+.scroll-palette .cursor.is-button{background:#fff}

@@ -1,0 +1,67 @@
+/* Продолжение главной: типографика и сетка первого экрана, без новых эффектов. */
+.about-section{padding:110px 4.2vw 30px;scroll-margin-top:40px}
+.about-heading{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:end;margin-bottom:64px}
+.about-section h2{font-size:clamp(52px,6.5vw,108px);font-weight:450;line-height:1.02;letter-spacing:-.055em;margin:0}
+.about-heading>p{font-size:15px;line-height:1.65;color:#595d65;max-width:420px;margin:0 0 6px;justify-self:end}
+.experience-row{display:grid;grid-template-columns:1fr 1fr;gap:70px;padding:38px 0 44px;border-top:1px solid #c9ccd3}
+.experience-place h3{font-size:clamp(24px,2.6vw,42px);line-height:1.15;font-weight:450;letter-spacing:-.045em;margin:0 0 15px;overflow-wrap:anywhere}
+.experience-place>p{font-size:13px;color:#595d65;margin:0;line-height:1.5}
+.experience-details{max-width:560px}
+.experience-details>p,.skills-grid p{font-size:15px;line-height:1.7;color:#595d65;margin:0 0 18px}
+.experience-details>p:last-child{margin-bottom:0}
+.experience-details>.experience-role{font-size:18px;font-weight:500;line-height:1.35;color:#16171a;margin-bottom:20px}
+.about-link{display:inline-flex;align-items:center;gap:18px;font-size:13px;padding:10px 0;color:#16171a}
+.about-link:hover,.about-link:focus-visible{color:#254bff}
+.skills-grid{display:grid;grid-template-columns:1fr 1fr;gap:48px 70px}
+.skills-grid article{max-width:540px}
+.skills-grid h3,.tools-block>h3{font-size:26px;line-height:1.2;letter-spacing:-.035em;font-weight:450;margin:0 0 18px}
+.skills-grid p{margin-bottom:0;max-width:480px}
+.tools-block{display:grid;grid-template-columns:1fr 1fr;gap:70px;border-top:1px solid #c9ccd3;margin-top:64px;padding-top:38px}
+.tools-list{margin:0}
+.tools-list>div{display:grid;grid-template-columns:115px 1fr;gap:22px;margin-bottom:24px}
+.tools-list dt{font-size:17px;font-weight:500;line-height:1.5}
+.tools-list dd{font-size:14px;line-height:1.65;color:#595d65;margin:0;max-width:350px}
+.process-list{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:32px;list-style:none;margin:0;padding:0}
+.process-list li{min-width:0;border-top:1px solid #c9ccd3;padding-top:24px}
+.process-number{display:block;color:#254bff;font-size:13px;font-variant-numeric:tabular-nums;margin-bottom:28px}
+.process-list h3{font-size:24px;font-weight:450;line-height:1.25;letter-spacing:-.035em;margin:0 0 18px;min-height:3.75em}
+.process-list p{font-size:15px;line-height:1.7;color:#595d65;margin:0;max-width:440px}
+.contact-section{padding-top:135px;padding-bottom:100px}
+.contact-section h2{font-size:clamp(52px,8vw,132px);margin-bottom:54px}
+.contact-content{width:calc(50% - 35px);margin-left:auto}
+.contact-intro{font-size:18px;line-height:1.6;max-width:520px;margin:0 0 30px}
+.contact-links{display:flex;align-items:flex-start;flex-direction:column;gap:23px}
+.contact-telegram{font-size:13px}
+.contact-email{font-size:clamp(18px,2vw,28px);letter-spacing:-.035em;overflow-wrap:anywhere}
+.contact-content>.about-link{margin-top:24px}
+footer.site-footer{margin:0 4.2vw;border-top:1px solid #c9ccd3;min-height:110px;padding:25px 0;font-size:12px}
+@media(min-width:1600px){.about-section{padding-left:5vw;padding-right:5vw}footer.site-footer{margin-left:5vw;margin-right:5vw}}
+@media(max-width:1100px){.about-heading,.experience-row,.skills-grid,.tools-block{gap:40px}.contact-content{width:calc(50% - 20px)}.tools-list>div{grid-template-columns:95px 1fr;gap:16px}}
+@media(max-width:1200px){.process-list{grid-template-columns:repeat(2,minmax(0,1fr));gap:40px}.process-list h3{min-height:2.5em}}
+@media(max-width:700px){
+ .about-section{padding:65px 24px 20px;scroll-margin-top:28px}
+ .about-heading{grid-template-columns:1fr;gap:24px;margin-bottom:38px}
+ .about-section h2{font-size:clamp(44px,11.5vw,78px)}
+ .about-heading>p{justify-self:start;font-size:13px;max-width:380px}
+ .experience-row{grid-template-columns:1fr;gap:24px;padding:28px 0 34px}
+ .experience-place h3{font-size:28px;margin-bottom:10px}
+ .experience-place>p{font-size:12px}
+ .experience-details>p,.skills-grid p{font-size:13px;line-height:1.65}
+ .experience-details>.experience-role{font-size:16px;margin-bottom:14px}
+ .skills-grid{grid-template-columns:1fr;gap:30px}
+ .skills-grid h3,.tools-block>h3{font-size:24px;margin-bottom:14px}
+ .tools-block{grid-template-columns:1fr;gap:12px;margin-top:38px;padding-top:28px}
+ .tools-list>div{grid-template-columns:90px 1fr;gap:18px;margin-bottom:20px}
+ .tools-list dt{font-size:15px}.tools-list dd{font-size:13px}
+ .process-list{grid-template-columns:1fr;gap:28px}
+ .process-list li{padding-top:20px}
+ .process-number{margin-bottom:18px;font-size:12px}
+ .process-list h3{min-height:0;font-size:24px;margin-bottom:14px;max-width:360px}
+ .process-list p{font-size:13px;line-height:1.65}
+ .contact-section{padding-top:80px;padding-bottom:55px}
+ .contact-section h2{font-size:clamp(38px,10.3vw,70px);margin-bottom:30px}
+ .contact-content{width:100%;margin-left:0}.contact-intro{font-size:16px;margin-bottom:25px}
+ .contact-telegram{font-size:12px}
+ footer.site-footer{margin:0 24px;min-height:110px;gap:12px;align-content:center}
+ footer.site-footer a{padding-top:0;width:auto}
+}

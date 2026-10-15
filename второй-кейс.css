@@ -1,0 +1,29 @@
+/* Второй крупный кейс: широкие экраны сайта и мобильный адаптив. */
+.youth-project{--case-button:#174f91}
+.youth-scene{position:relative;isolation:isolate;height:clamp(500px,53vw,740px);overflow:hidden;border-radius:20px;background:#c8dfef}
+.youth-rink{position:absolute;width:112%;height:125%;left:-6%;top:10%;border:2px solid #fff9;border-radius:40%;transform:rotate(-22deg);background:#adcce3}
+.youth-rink::before{content:"";position:absolute;left:50%;inset-block:0;border-left:2px solid #fff9}
+.youth-rink::after{content:"";position:absolute;width:28%;aspect-ratio:1;border:2px solid #fff9;left:36%;top:26%;border-radius:50%}
+.youth-screen{position:absolute;overflow:hidden;background:#fff;box-shadow:0 28px 50px -18px #14365766}
+.youth-screen img{display:block;width:100%;height:100%;object-fit:cover;object-position:top}
+.youth-desktop{left:7%;top:7%;width:70%;aspect-ratio:1.62;border:5px solid #f3f6f9;border-radius:12px;transform:translate3d(calc(var(--youth-rest,0)*45px),calc(var(--youth-rest,0)*90px),0) rotate(calc(-4deg + var(--youth-rest,0)*4deg))}
+.youth-schedule{left:4%;top:60%;width:51%;aspect-ratio:1.9;border:4px solid #f3f6f9;border-radius:10px;z-index:2;transform:translate3d(calc(var(--youth-rest,0)*100px),calc(var(--youth-rest,0)*100px),0) rotate(calc(5deg - var(--youth-rest,0)*5deg))}
+.youth-phone{right:7%;top:23%;width:19%;aspect-ratio:390/844;border:5px solid #edf2f7;border-radius:30px;z-index:3;transform:translate3d(calc(var(--youth-rest,0)*-120px),calc(var(--youth-rest,0)*70px),0) rotate(calc(7deg - var(--youth-rest,0)*7deg))}
+.youth-scene .feature-open{color:#174f91}
+.youth-project .feature-caption h3{font-size:clamp(46px,6.2vw,100px)}
+.youth-project .featured-card:focus-visible .feature-open{color:#fff}
+@media(hover:hover) and (pointer:fine){.youth-project .featured-card:hover .feature-open{color:#fff}}
+@media(max-width:1000px){
+ .youth-scene{height:570px}
+ .youth-desktop{left:4%;top:9%;width:82%}
+ .youth-schedule{left:1%;top:58%;width:62%}
+ .youth-phone{right:5%;top:28%;width:25%;border-radius:24px;border-width:4px}
+}
+@media(max-width:700px){
+ .youth-scene{height:clamp(460px,120vw,610px);border-radius:14px}
+ .youth-desktop{left:-4%;top:8%;width:102%;border-width:3px;border-radius:8px}
+ .youth-schedule{left:-4%;top:58%;width:82%;aspect-ratio:1.5;border-width:3px}
+ .youth-phone{right:5%;top:31%;width:40%;border-width:3px;border-radius:20px}
+ .youth-project .feature-caption h3{font-size:clamp(42px,10.6vw,72px)}
+}
+@media(prefers-reduced-motion:reduce){.youth-scene{--youth-rest:0!important}}

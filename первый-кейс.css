@@ -1,0 +1,71 @@
+/* Крупная сцена первого кейса. Остальные карточки сохраняют свою подачу. */
+.hero-3d .hero-stage{transform:scale(var(--hero-departure,1));transform-origin:center top}
+.featured-project{grid-column:1/-1;perspective:none;margin-bottom:30px}
+.featured-project .featured-card{transform:none;opacity:1}
+.feature-scene{position:relative;isolation:isolate;height:clamp(460px,53vw,740px);overflow:hidden;border-radius:20px;background:#064f40}
+.feature-orbit{position:absolute;width:92%;aspect-ratio:1;left:4%;top:18%;border-radius:50%;background:#bdd5c5;transform:scale(var(--orbit-scale,1));transform-origin:center 25%}
+.feature-phone{position:absolute;width:23%;max-width:310px;aspect-ratio:390/844;border:5px solid #e9eeeb;border-radius:36px;overflow:hidden;background:#f5f5f5;box-shadow:0 35px 55px -15px #092d3859;transform:translate3d(var(--phone-x,0px),var(--phone-y,0px),0) rotate(var(--phone-angle,0deg));transform-origin:center;will-change:auto}
+.feature-phone img{display:block;width:100%;height:100%;object-fit:cover;object-position:top}
+.feature-phone-intro{left:14%;top:11%;--phone-angle:-12deg;z-index:1}
+.feature-phone-catalog{left:38.5%;top:5%;z-index:3}
+.feature-phone-product{right:14%;top:15%;--phone-angle:12deg;z-index:2}
+.feature-open{position:absolute;z-index:4;right:28px;bottom:26px;display:flex;align-items:center;gap:24px;border-radius:40px;padding:17px 22px;background:#fff;color:#064f40;font-size:14px;box-shadow:0 4px 16px #063e3514}
+.feature-open{isolation:isolate;overflow:hidden;transition:color .25s,box-shadow .3s,translate .3s}
+.feature-open::before{content:"";position:absolute;inset:0;z-index:-1;background:var(--case-button,#064f40);border-radius:50% 50% 0 0;transform:translateY(105%);transition:transform .4s cubic-bezier(.22,.75,.3,1),border-radius .4s}
+.feature-open>span{font-size:22px;line-height:1;transition:transform .3s}
+.project-card:focus-visible .feature-open{color:#fff;box-shadow:0 6px 20px #092d3833}
+.project-card:focus-visible .feature-open::before{transform:translateY(0);border-radius:0}
+.project-card:focus-visible .feature-open>span{transform:translate(3px,-3px)}
+.project-card:active .feature-open{translate:0 1px;box-shadow:0 2px 6px #092d3826}
+@media(hover:hover) and (pointer:fine){
+ .project-card:hover .feature-open{color:#fff;box-shadow:0 6px 20px #092d3833}
+ .project-card:hover .feature-open::before{transform:translateY(0);border-radius:0}
+ .project-card:hover .feature-open>span{transform:translate(3px,-3px)}
+}
+/* Вторичные кнопки главной: тот же отчётливый отклик, без изменения размеров. */
+.hero-3d .secondary{transition:background .25s,color .25s,box-shadow .25s}
+.hero-3d .secondary:focus-visible{background:#fff;color:#16171a;box-shadow:0 5px 18px #0002}
+.replay{border-radius:24px;transition:background .25s,color .25s}
+.replay:focus-visible:not(:disabled){background:#fff;color:#16171a}
+.skip-intro{transition:background .25s,color .25s,border-color .25s}
+.skip-intro:focus-visible{background:#16171a;color:#fff;border-color:#16171a}
+@media(hover:hover) and (pointer:fine){
+ .hero-3d .secondary:hover{background:#fff;color:#16171a;box-shadow:0 5px 18px #0002}
+ .replay:hover:not(:disabled){background:#fff;color:#16171a}
+ .skip-intro:hover{background:#16171a;color:#fff;border-color:#16171a}
+}
+.featured-project .feature-caption{display:grid;grid-template-columns:1fr 1fr;gap:40px;padding-top:28px;align-items:start}
+.featured-project .project-type{margin-bottom:10px}
+.featured-project .feature-caption h3{font-size:clamp(48px,7vw,108px);letter-spacing:-.055em;line-height:1.05}
+.feature-summary{max-width:470px;justify-self:end;padding-top:2px}
+.feature-about{margin:0 0 16px;font-size:clamp(20px,2vw,28px);line-height:1.3;letter-spacing:-.025em}
+.feature-role{margin:0;font-size:14px;line-height:1.65;color:var(--scroll-muted,#595d65)}
+.featured-card:focus-visible{outline:3px solid var(--scroll-accent,#254bff);outline-offset:8px;border-radius:20px}
+@media(max-width:1000px){
+ .feature-scene{height:580px}
+ .feature-phone{width:29%;border-width:4px;border-radius:28px}
+ .feature-phone-intro{left:5%;top:17%}
+ .feature-phone-catalog{left:35.5%;top:7%}
+ .feature-phone-product{right:5%;top:20%}
+ .feature-summary{max-width:360px}
+}
+@media(max-width:700px){
+ .featured-project{margin-bottom:8px}
+ .feature-scene{height:clamp(420px,115vw,570px);border-radius:14px}
+ .feature-orbit{width:160%;left:-30%;top:28%}
+ .feature-phone{width:43%;border-width:3px;border-radius:22px}
+ .feature-phone-intro{left:-9%;top:19%;--phone-angle:-14deg}
+ .feature-phone-catalog{width:48%;left:26%;top:7%}
+ .feature-phone-product{right:-9%;top:25%;--phone-angle:14deg}
+ .feature-open{bottom:18px;right:18px;font-size:12px;padding:13px 16px;gap:22px}
+ .featured-project .feature-caption{grid-template-columns:1fr;gap:20px;padding-top:22px}
+ .featured-project .feature-caption h3{font-size:clamp(48px,12vw,76px)}
+ .feature-summary{justify-self:start;max-width:430px;padding:0}
+ .feature-about{font-size:22px;margin-bottom:12px}
+ .feature-role{font-size:13px}
+}
+@media(prefers-reduced-motion:reduce){
+ .hero-3d .hero-stage{transform:none}
+ .feature-phone{transform:rotate(var(--phone-angle,0deg))}
+ .feature-open,.feature-open::before,.feature-open>span,.hero-3d .secondary,.replay,.skip-intro{transition:none}
+}
