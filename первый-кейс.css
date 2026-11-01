@@ -7,7 +7,7 @@
 .feature-phone{position:absolute;width:23%;max-width:310px;aspect-ratio:390/844;border:5px solid #e9eeeb;border-radius:36px;overflow:hidden;background:#f5f5f5;box-shadow:0 35px 55px -15px #092d3859;transform:translate3d(var(--phone-x,0px),var(--phone-y,0px),0) rotate(var(--phone-angle,0deg));transform-origin:center;will-change:auto}
 .feature-phone img{display:block;width:100%;height:100%;object-fit:cover;object-position:top}
 .feature-phone-intro{left:14%;top:11%;--phone-angle:-12deg;z-index:1}
-.feature-phone-catalog{left:38.5%;top:5%;z-index:3}
+.feature-phone-catalog{left:50%;top:5%;translate:-50% 0;z-index:3}
 .feature-phone-product{right:14%;top:15%;--phone-angle:12deg;z-index:2}
 .feature-open{position:absolute;z-index:4;right:28px;bottom:26px;display:flex;align-items:center;gap:24px;border-radius:40px;padding:17px 22px;background:#fff;color:#064f40;font-size:14px;box-shadow:0 4px 16px #063e3514}
 .feature-open{isolation:isolate;overflow:hidden;transition:color .25s,box-shadow .3s,translate .3s}
@@ -45,7 +45,7 @@
  .feature-scene{height:580px}
  .feature-phone{width:29%;border-width:4px;border-radius:28px}
  .feature-phone-intro{left:5%;top:17%}
- .feature-phone-catalog{left:35.5%;top:7%}
+ .feature-phone-catalog{top:7%}
  .feature-phone-product{right:5%;top:20%}
  .feature-summary{max-width:360px}
 }
@@ -55,7 +55,7 @@
  .feature-orbit{width:160%;left:-30%;top:28%}
  .feature-phone{width:43%;border-width:3px;border-radius:22px}
  .feature-phone-intro{left:-9%;top:19%;--phone-angle:-14deg}
- .feature-phone-catalog{width:48%;left:26%;top:7%}
+ .feature-phone-catalog{width:48%;top:7%}
  .feature-phone-product{right:-9%;top:25%;--phone-angle:14deg}
  .feature-open{bottom:18px;right:18px;font-size:12px;padding:13px 16px;gap:22px}
  .featured-project .feature-caption{grid-template-columns:1fr;gap:20px;padding-top:22px}
@@ -68,7 +68,7 @@
 @media(max-width:900px){
  .hero-3d .actions{width:100%;flex-direction:column;gap:10px}
  .hero-3d .actions>.primary,.hero-3d .actions>.secondary{display:inline-flex;align-items:center;justify-content:center;width:100%;height:56px;padding:0 24px;border-radius:40px;font-size:12px;line-height:19px}
- .hero-3d .actions>.secondary{border:1px solid #fff;background:transparent;color:#fff;gap:14px}
+ .hero-3d .actions>.secondary{border:1px solid #fff;background:#20232a;color:#fff;gap:14px}
  .hero-3d .actions>.secondary>span{margin-left:0;font-size:22px;line-height:19px}
  .hero-3d .actions>.primary,.contact-section .contact-telegram{background:#fff;color:#16171a}
  .hero-3d .actions>.primary::before,.contact-section .contact-telegram::before{display:none}
@@ -84,7 +84,7 @@
 /* Точечная правка кнопок первого экрана, только в десктопной раскладке. */
 @media(min-width:901px){
  .hero-3d .actions>.primary,.hero-3d .actions>.secondary{height:64px;display:inline-flex;align-items:center;border-radius:40px}
- .hero-3d .actions>.secondary{padding:0 27px;border:1px solid #fff;background:transparent;color:#fff;font-size:13px;line-height:19px;gap:14px}
+ .hero-3d .actions>.secondary{padding:0 27px;border:1px solid #fff;background:#20232a;color:#fff;font-size:13px;line-height:19px;gap:14px}
  .hero-3d .actions>.secondary>span{margin-left:0}
  .hero-3d .actions>.secondary:focus-visible{background:#fff;color:#16171a}
  .hero-3d .replay{position:relative;border-radius:0}
