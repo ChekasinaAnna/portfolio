@@ -1,6 +1,6 @@
 /* Второй крупный кейс: широкие экраны сайта и мобильный адаптив. */
 .youth-project{--case-button:#174f91}
-.youth-scene{position:relative;isolation:isolate;height:clamp(500px,53vw,740px);overflow:hidden;border-radius:20px;background:#c8dfef}
+.youth-scene{position:relative;isolation:isolate;height:var(--featured-banner-height);overflow:hidden;border-radius:20px;background:#c8dfef}
 .youth-rink{position:absolute;width:112%;height:125%;left:-6%;top:10%;border:2px solid #fff9;border-radius:40%;transform:rotate(-22deg);background:#adcce3}
 .youth-rink::before{content:"";position:absolute;left:50%;inset-block:0;border-left:2px solid #fff9}
 .youth-rink::after{content:"";position:absolute;width:28%;aspect-ratio:1;border:2px solid #fff9;left:36%;top:26%;border-radius:50%}
@@ -14,13 +14,12 @@
 .youth-project .featured-card:focus-visible .feature-open{color:#fff}
 @media(hover:hover) and (pointer:fine){.youth-project .featured-card:hover .feature-open{color:#fff}}
 @media(max-width:1000px){
- .youth-scene{height:570px}
  .youth-desktop{left:4%;top:9%;width:82%}
  .youth-schedule{left:1%;top:58%;width:62%}
  .youth-phone{right:5%;top:28%;width:25%;border-radius:24px;border-width:4px}
 }
 @media(max-width:700px){
- .youth-scene{height:clamp(460px,120vw,610px);border-radius:14px}
+ .youth-scene{border-radius:14px}
  .youth-desktop{left:-4%;top:8%;width:102%;border-width:3px;border-radius:8px}
  .youth-schedule{left:-4%;top:58%;width:82%;aspect-ratio:1.5;border-width:3px}
  .youth-phone{right:5%;top:31%;width:40%;border-width:3px;border-radius:20px}
